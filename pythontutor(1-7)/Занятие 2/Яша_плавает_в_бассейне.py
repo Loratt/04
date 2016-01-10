@@ -1,0 +1,5 @@
+N = int(input())
+M = int(input())
+x = int(input())
+y = int(input())
+print(min(N-x,min(x,min(M-y,y)))) 
