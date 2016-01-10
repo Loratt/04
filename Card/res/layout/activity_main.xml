@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Credit Card"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/edit_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_edittext"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/cc_front"
+            android:tag="1" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            style="@style/DrivemeappEditTextCustomViewBind"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="number"
+            android:maxLength="19"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/short_code"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:enabled="false"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/data"
+            style="@style/DrivemeappEditTextCustomViewBind"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:enabled="false"
+            android:hint="@string/MMYY"
+            android:inputType="number"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/cvv"
+            style="@style/DrivemeappEditTextCustomViewBind"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:enabled="false"
+            android:hint="@string/CVV"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="20dp" >
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_background_priveous"
+            android:enabled="false"
+            android:text="@string/Previous"
+            android:textColor="#FF888888"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/previous"
+            android:background="@drawable/button_background_next"
+            android:enabled="false"
+            android:text="@string/Next"
+            android:textColor="#FF888888"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background_done"
+            android:enabled="false"
+            android:text="@string/OK"
+            android:textColor="#FF888888"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
